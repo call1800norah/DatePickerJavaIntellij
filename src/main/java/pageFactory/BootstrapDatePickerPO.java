@@ -13,34 +13,34 @@ import java.util.List;
 public class BootstrapDatePickerPO {
 
    @FindBy(xpath = "//div/h1[text()=\'Bootstrap Date Pickers Example\']")
-    public WebElement PageHeader;
+    public WebElement pageHeader;
 
    @FindBy(xpath = "//div[@class='panel-heading' and text()='Date Example :']")
-    public WebElement DateExampleHeader;
+    public WebElement dateExampleHeader;
 
    @FindBy(xpath = "//div[@class='panel-heading' and text()='Date Range Example :']")
-    public WebElement DateRangeExampleHeader;
+    public WebElement dateRangeExampleHeader;
 
    @FindBy(xpath = "/html/body/div[2]/div/div[2]/div[1]/div/ul/li")
-    public List<WebElement> DateExampleList;
+    public List<WebElement> dateExampleList;
 
    @FindBy(xpath = "/html/body/div[2]/div/div[2]/div[2]/div/ul/li")
-    public List<WebElement> DateRangeExampleList;
+    public List<WebElement> dateRangeExampleList;
 
    @FindBy(xpath = "//*[@id=\"sandbox-container1\"]/h4")
-    public WebElement DateExampleSelectDate;
+    public WebElement dateExampleSelectDate;
 
    @FindBy(xpath = "//*[@id=\"sandbox-container2\"]/h4")
-    public WebElement DateRangeExampleSelectDate;
+    public WebElement dateRangeExampleSelectDate;
 
    @FindBy(xpath = "//div[@class='input-group date']//input")
-    public WebElement InputDate;
+    public WebElement inputDate;
 
    @FindBy(xpath = "//div[@class='input-daterange input-group']//input[@placeholder='Start date']")
-    public WebElement InputStartDate;
+    public WebElement inputStartDate;
 
    @FindBy(xpath = "//div[@class='input-daterange input-group']//input[@placeholder='End date']")
-    public WebElement InputEndDate;
+    public WebElement inputEndDate;
 
 
 

@@ -45,11 +45,11 @@ public class TestBase {
 
     //Test cleanup
     @After
-    public void TestClean() {
+    public void testClean() {
         driver.quit();
     }
 
-    public void WaitForDisplayed(WebElement element) {
+    public void waitForDisplayed(WebElement element) {
         Assert.assertNotNull("The element returned as null.", element);
 
         Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
@@ -63,17 +63,17 @@ public class TestBase {
 
 
         } catch (TimeoutException e) {
-            Assert.assertFalse("WaitForDisplayed timed out in 30seconds", element.isDisplayed());
+            Assert.assertFalse("waitForDisplayed timed out in 30seconds", element.isDisplayed());
             System.out.println(e.getMessage());
         }
     }
-    public void VerifyElementList(List<WebElement> elements, List<String> strList){
+    public void verifyElemFentList(List<WebElement> elements, List<String> strList){
         for(WebElement e:elements){
-            WaitForDisplayed(e);
-            CompareElementListToStringList(elements, strList);
+            waitForDisplayed(e);
+            compareElementListToStringList(elements, strList);
         }
     }
-    public void CompareElementListToStringList(List<WebElement> elements, List<String> strList){
+    public void compareElementListToStringList(List<WebElement> elements, List<String> strList){
         int i = 0;
         for(String s:strList){
             Assert.assertTrue(s.equals(elements.get(i).getText().trim()));
